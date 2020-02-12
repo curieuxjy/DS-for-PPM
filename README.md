@@ -16,18 +16,26 @@ Basic Education of Data Science for Production Process Monitoring
 - 머신러닝 활용 데이터베이스 데이터 분석
 - 딥러닝 활용 생산공정 이미지 데이터 분석
 ```
+- - -
 ## Day 1
 - Python review
 - Data acquistion
     - Website data scraping (사진, 일기예보, 실시간주가)
     - IMU(Inertial Measurement Unit) data
+    <img src="./day1/1.png" width="50%" height="50%"></img>
+    ![imu_img](./day1/1.png)
+### Code List
+|Content|Code|
+|-|-|
+|python 기본|[Code](./day1/untitled0.py)|
 
+- - -
 ## Day 2
 - Database programming (SQL)
 - Machine Learning
     - Supervised learning: regression, classification
     - (Optional) Unsupervised learning: clustering, PCA
-
+- - -
 ## Day 3
 - OpenCV 활용한ML
 - (Optional) Team project
