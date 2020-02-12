@@ -1,7 +1,8 @@
 # DS-for-PPM
 Basic Education of Data Science for Production Process Monitoring
 ```
-데이터 사이언스 분야 생산공정 모니터링 이미지 처리 기법 강의 및 관련 실습(국가 경쟁력 강화를 위한 소재∙부품∙장비 산업 전문인력 양성과정)
+(국가 경쟁력 강화를 위한 소재∙부품∙장비 산업 전문인력 양성과정)
+데이터 사이언스 분야 생산공정 모니터링 이미지 처리 기법 강의 및 관련 실습
 - 오유근(홍익대학교 기계시스템디자인공학과 교수)
 - 기간: 2020.02.12(수)~02.14(금) 09:00~18:00
 
@@ -22,8 +23,8 @@ Basic Education of Data Science for Production Process Monitoring
 - Data acquistion
     - Website data scraping (사진, 일기예보, 실시간주가)
     - IMU(Inertial Measurement Unit) data
-    <img src="./day1/1.png" width="50%" height="50%"></img>
-    ![imu_img](./day1/1.png)
+    <img src="./day1/1.png" width="70%" height="70%"></img>
+    
 ### Code List
 |Content|Code|
 |-|-|
