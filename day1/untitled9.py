@@ -49,10 +49,10 @@ def getCurrentStockPrice():
 #  print(curPrice2)
   curPrice3 = int(curPrice2.replace(',', ''))
   print(curPrice3)
-  ###########csv 파일 저장
+  ########### csv 파일 저장
   tmpTime = dt.datatime.now()
   curTime = tmpTime.strftime('%Y-%m-%d %H:%M:%S')
-  #########3 값이 변하는 것처럼 만들기 위해서
+  ######### 값이 변하는 것처럼 만들기 위해서
   if True:
     rndCurPrice = 
   #########

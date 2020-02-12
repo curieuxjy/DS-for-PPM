@@ -111,10 +111,10 @@ ax3.set_xlabel('Time')
 ax3.set_ylabel('Magnetic Field')
 ax3.set_title('Magnetometer Data')
 #----------------------------------------------------------------------
-#fig1.saved('1.png')
+
 fig1.savefig('1.png')
 fig1.show()
-#fig1.saved('1.png')
+
 dfImuData = pd.DataFrame(imuData)
 dfImuData.to_csv('IMU_Data_Period_0_ls.csv')
     
