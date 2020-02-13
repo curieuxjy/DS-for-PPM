@@ -55,6 +55,7 @@ Basic Education of Data Science for Production Process Monitoring
 - Machine Learning
     - Supervised learning: regression, classification
     - (Optional) Unsupervised learning: clustering, PCA
+    <img src="./day2/sqlite-sample-database-diagram.PNG" width="70%" height="70%"></img>
 
 ### Code List
 |Content|Code|
@@ -75,7 +76,7 @@ Basic Education of Data Science for Production Process Monitoring
 ### Reference Link
 - [Spyder plotting in a New window](https://talkingaboutme.tistory.com/entry/ML-Spyder%EB%82%B4%EC%97%90%EC%84%9C-plot%EC%9D%84-new-window%EC%97%90-%ED%95%98%EA%B8%B0)
 - [DataSet Source](https://people.sc.fsu.edu/~jburkardt/datasets/regression/regression.html)
-- [MRNet])(https://stanfordmlgroup.github.io/projects/mrnet/)
+- [MRNet](https://stanfordmlgroup.github.io/projects/mrnet/)
 - [SQL tutorials](http://w3school.com/)
 - [SQL reference site](https://www.w3schools.com/sql/default.asp)
 - [SQL Python](http://pythonstudy.xyz/python/article/204-SQLite-%EC%82%AC%EC%9A%A9)
