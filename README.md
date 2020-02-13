@@ -59,17 +59,32 @@ Basic Education of Data Science for Production Process Monitoring
 ### Code List
 |Content|Code|
 |-|-|
-||[Code](./day2/untitled0.py)|
-||[Code](./day2/untitled0.py)|
-||[Code](./day2/untitled0.py)|
-||[Code](./day2/untitled0.py)|
-||[Code](./day2/untitled0.py)|
-||[Code](./day2/untitled0.py)|
+|SQL SELECT|[Code](./day2/untitled0.py)|
+|SQL INSERT|[Code](./day2/untitled1.py)|
+|StockPrice DB|[Code](./day2/untitled2.py)|
+|Linear Regression|[Code](./day2/untitled3.py)|
+|Moving Error|[Code](./day2/untitled4.py)|
+|Body Weight vs. Brain Weight|[Code](./day2/untitled5.py)|
+|Multivariate Linear Regression|[Code](./day2/untitled6.py)|
+|Polynomial Regression|[Code](./day2/untitled7.py)|
+|Ridge Regression|[Code](./day2/untitled8.py)|
+|Time-Series Estimation|[Code](./day2/untitled9.py)|
+
+
 
 ### Reference Link
-- []()
-- 
+- [Spyder plotting in a New window](https://talkingaboutme.tistory.com/entry/ML-Spyder%EB%82%B4%EC%97%90%EC%84%9C-plot%EC%9D%84-new-window%EC%97%90-%ED%95%98%EA%B8%B0)
+- [DataSet Source](https://people.sc.fsu.edu/~jburkardt/datasets/regression/regression.html)
+- [MRNet])(https://stanfordmlgroup.github.io/projects/mrnet/)
+- [SQL tutorials](http://w3school.com/)
+- [SQL reference site](https://www.w3schools.com/sql/default.asp)
+- [SQL Python](http://pythonstudy.xyz/python/article/204-SQLite-%EC%82%AC%EC%9A%A9)
+- [Machine Learning youtube](https://youtu.be/0_lKUPYEYyY)
+- [Autoregression Models for Time Series Forecasting With Python](https://machinelearningmastery.com/autoregression-models-time-series-forecasting-python/)
+- [11 Classical Time Series Forecasting Methods in Python (Cheat Sheet)](https://machinelearningmastery.com/time-series-forecasting-methods-in-python-cheat-sheet/)
+
 - - -
+
 ## Day 3
 - OpenCV 활용한ML
 - (Optional) Team project
