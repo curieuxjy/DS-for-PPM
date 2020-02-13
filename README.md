@@ -43,6 +43,7 @@ Basic Education of Data Science for Production Process Monitoring
 |IMU data plotting|[Code](./day1/untitled11.py)|
 
 ### Reference Link
+- [Python underscore](https://mingrammer.com/underscore-in-python/)
 - [Python file reading](http://pythonstudy.xyz/python/article/206-%ED%8C%8C%EC%9D%BC-%EB%8D%B0%EC%9D%B4%ED%83%80-%EC%B2%98%EB%A6%AC)
 - [Timer](https://stackoverflow.com/questions/3393612/run-certain-code-every-n-seconds)
 - [Android Sensor data](https://developer.android.com/guide/topics/sensors/sensors_motion?hl=ko)
@@ -54,8 +55,37 @@ Basic Education of Data Science for Production Process Monitoring
 - Machine Learning
     - Supervised learning: regression, classification
     - (Optional) Unsupervised learning: clustering, PCA
+
+### Code List
+|Content|Code|
+|-|-|
+||[Code](./day2/untitled0.py)|
+||[Code](./day2/untitled0.py)|
+||[Code](./day2/untitled0.py)|
+||[Code](./day2/untitled0.py)|
+||[Code](./day2/untitled0.py)|
+||[Code](./day2/untitled0.py)|
+
+### Reference Link
+- []()
+- 
 - - -
 ## Day 3
 - OpenCV 활용한ML
 - (Optional) Team project
+
+### Code List
+|Content|Code|
+|-|-|
+||[Code](./day3/untitled0.py)|
+||[Code](./day3/untitled0.py)|
+||[Code](./day3/untitled0.py)|
+||[Code](./day3/untitled0.py)|
+||[Code](./day3/untitled0.py)|
+||[Code](./day3/untitled0.py)|
+
+### Reference Link
+- []()
+- 
+- - -
 
