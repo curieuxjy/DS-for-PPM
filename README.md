@@ -94,14 +94,19 @@ Basic Education of Data Science for Production Process Monitoring
 |Content|Code|
 |-|-|
 ||[Code](./day3/untitled0.py)|
-||[Code](./day3/untitled0.py)|
-||[Code](./day3/untitled0.py)|
-||[Code](./day3/untitled0.py)|
-||[Code](./day3/untitled0.py)|
-||[Code](./day3/untitled0.py)|
+||[Code](./day3/untitled1.py)|
+||[Code](./day3/untitled2.py)|
+||[Code](./day3/untitled3.py)|
+||[Code](./day3/untitled4.py)|
+||[Code](./day3/untitled5.py)|
+||[Code](./day3/untitled6.py)|
+||[Code](./day3/untitled7.py)|
+||[Code](./day3/untitled8.py)|
 
 ### Reference Link
 - []()
-- 
-- - -
+- []()
+- []()
+- []()
+- []()
 
