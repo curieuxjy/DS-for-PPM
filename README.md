@@ -93,20 +93,29 @@ Basic Education of Data Science for Production Process Monitoring
 ### Code List
 |Content|Code|
 |-|-|
-||[Code](./day3/untitled0.py)|
-||[Code](./day3/untitled1.py)|
-||[Code](./day3/untitled2.py)|
-||[Code](./day3/untitled3.py)|
-||[Code](./day3/untitled4.py)|
-||[Code](./day3/untitled5.py)|
-||[Code](./day3/untitled6.py)|
-||[Code](./day3/untitled7.py)|
-||[Code](./day3/untitled8.py)|
+|OpenCV image test code|[Code](./day3/untitled0.py)|
+|OpenCV video test code|[Code](./day3/untitled1.py)|
+|Image Crop|[Code](./day3/untitled2.py)|
+|Video Recording|[Code](./day3/untitled3.py)|
+|Video Capture|[Code](./day3/untitled4.py)|
+|Resize Video|[Code](./day3/untitled5.py)|
+|Mouse Control|[Code](./day3/untitled6.py)|
+|Boxing|[Code](./day3/untitled7.py)|
+|Resize & Move Window|[Code](./day3/untitled8.py)|
+|ROI|[Code](./day3/untitled9.py)|
+|Drag and Capture|[Code](./day3/untitled10.py)|
+|GreyScale Comparison(raw&module)|[Code](./day3/untitled11.py)|
+|Image Comparison|[Code](./day3/untitled12.py)|
+|Image Subtraction|[Code](./day3/untitled13.py)|
+|Motion Difference Video|[Code](./day3/untitled14.py)|
+||[Code](./day3/untitled15.py)|
+||[Code](./day3/untitled16.py)|
+||[Code](./day3/untitled17.py)|
 
 ### Reference Link
-- []()
-- []()
-- []()
+- [OpenCV Codes(파이썬으로 만드는 OpenCV 프로젝트)](./day2/insightbook.opencv_project_python-master)
+- [ip web cam](https://stackoverflow.com/questions/49978705/access-ip-camera-in-python-opencv)
+- [opencv documentation](https://opencv-python.readthedocs.io/en/latest/#)
 - []()
 - []()
 
