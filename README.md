@@ -88,7 +88,7 @@ Basic Education of Data Science for Production Process Monitoring
 
 ## Day 3
 - OpenCV 활용한ML
-- (Optional) Team project
+- Team project: rock, paper Classification (1Hour Liimt)
 
 ### Code List
 |Content|Code|
@@ -111,11 +111,19 @@ Basic Education of Data Science for Production Process Monitoring
 ||[Code](./day3/untitled15.py)|
 ||[Code](./day3/untitled16.py)|
 ||[Code](./day3/untitled17.py)|
+||[Code](./day3/untitled18.py)|
+||[Code](./day3/untitled19.py)|
+||[Code](./day3/untitled20.py)|
+||[Code](./day3/untitled21.py)|
+||[Code](./day3/untitled22.py)|
+||[Code](./day3/untitled23.py)|
+||[Code](./day3/untitled24.py)|
+||[Code](./day3/project.py)|
 
 ### Reference Link
 - [OpenCV Codes(파이썬으로 만드는 OpenCV 프로젝트)](./day2/insightbook.opencv_project_python-master)
 - [ip web cam](https://stackoverflow.com/questions/49978705/access-ip-camera-in-python-opencv)
 - [opencv documentation](https://opencv-python.readthedocs.io/en/latest/#)
-- []()
-- []()
+- [ipdb 사용](http://pythonstudy.xyz/python/article/505-Python-%EB%94%94%EB%B2%84%EA%B9%85-PDB)
+- [Python Convex Optimization](https://cvxopt.org/)
 
