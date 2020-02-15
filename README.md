@@ -89,6 +89,7 @@ Basic Education of Data Science for Production Process Monitoring
 ## Day 3
 - OpenCV 활용한ML
 - Team project: rock, paper Classification (1Hour Liimt)
+<img src="./day3/1.png" width="70%" height="70%"></img>
 
 ### Code List
 |Content|Code|
