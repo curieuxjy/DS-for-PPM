@@ -1,80 +1,78 @@
 # -*- coding: utf-8 -*-
-#Small Project
+# Team Project
 
 from sklearn.gaussian_process import GaussianProcessClassifier
 from sklearn.gaussian_process.kernels import RBF
 import cv2
 import numpy as np
 
-#------------------------edge-------------------
-names = ['bo.jpg','bo2.jpg','rock.jpg','rock2.jpg']
-path = "../data/" 
+#------------------edge-detection------------------
+names = ['paper1.jpg','paper2.jpg','rock1.jpg','rock2.jpg']
+path = "data/" 
 list_num = []
+
 for name in names:
     file_path = path + name
+    # grayScale
     img = cv2.imread(file_path,cv2.IMREAD_GRAYSCALE)
     list_num.append(img)
-    
+
+# Laplacian Edge 
 edge_list = [cv2.Laplacian(list_num[i],-1) for i in range(len(list_num))]
 
-Bo = np.hstack((list_num[0],edge_list[0]))
-cv2.imshow('B',Bo)
-Bo_data = np.ravel(edge_list[0],order = 'C')
+# Horizontal Stacking & Labeling(0->paper, 1->rock)
+paper1 = np.hstack((list_num[0],edge_list[0]))
+cv2.imshow('Paper1',paper1)
+# Flatten
+paper1_data = np.ravel(edge_list[0],order = 'C')
 #print(Bo_data.shape)
-Bo_label = '0'
+paper1_label = '0'
 
+paper2 = np.hstack((list_num[1],edge_list[1]))
+cv2.imshow('Paper2',paper2)
+paper2_data = np.ravel(edge_list[1],order = 'C')
+paper2_label = '0'
 
-Bo2 = np.hstack((list_num[1],edge_list[1]))
-cv2.imshow('B',Bo2)
-Bo2_data = np.ravel(edge_list[1],order = 'C')
-Bo2_label = '0'
-#--------------------------------------------------------
+rock1 = np.hstack((list_num[2],edge_list[2]))
+cv2.imshow('Rock1',rock1)
+rock1_data = np.ravel(edge_list[2],order = 'C')
+rock1_label = '1'
 
+rock2 = np.hstack((list_num[3],edge_list[3]))
+cv2.imshow('Rock2',rock2)
+rock2_data = np.ravel(edge_list[3],order = 'C')
+rock2_label = '1'
 
-Ro = np.hstack((list_num[2],edge_list[2]))
-cv2.imshow('R',Ro)
-Ro_data = np.ravel(edge_list[2],order = 'C')
-Ro_label = '1'
+#------------------------Train DataSet------------------------
+X_data= np.array([paper1_data,paper2_data,rock1_data,rock2_data])
+Y_label = np.vstack([paper1_label,paper2_label,rock1_label,rock2_label]).reshape(-1,1)
+print(X_data.shape) # (n_samples, n_features) e.g.(사진 수, 픽셀 수) (4, 307200)
+print(Y_label.shape) # (n_samples,) e.g.(라벨 수,) (4, 1)
 
-
-Ro2 = np.hstack((list_num[3],edge_list[3]))
-cv2.imshow('R',Ro2)
-Ro2_data = np.ravel(edge_list[3],order = 'C')
-Ro2_label = '1'
-
-X_data= np.array([Bo_data,Bo2_data,Ro_data,Ro2_data])
-Y_label = np.vstack([Bo_label,Bo2_label,Ro_label,Ro2_label]).reshape(-1,1)
-  
-
-print(X_data.shape)
-
-#------------------------------model-----main-------------------------
+#--------------------------model-main-------------------------
 kernel = 1.0 * RBF(1.0)
-X = X_data  #(150, 4)
-y = Y_label # (150,)
 gpc = GaussianProcessClassifier(kernel=kernel,random_state=0)
-gpc.fit(X, y)
+# training
+gpc.fit(X_data, Y_label)
 
-
-# new
-img_new = cv2.imread('C:/Users/LG\Desktop/Intro for Data Science/data/test.jpg',cv2.IMREAD_GRAYSCALE)
+# new data (=test data, unseen data)
+img_new = cv2.imread('data/test.jpg',cv2.IMREAD_GRAYSCALE)
 X_new = np.ravel(img_new,order = 'C').reshape(-1,1).T
 
-print(X_new.shape)
-#--------------------------------------------------------------------
+print(X_new.shape) #(1, 307200) #(n_samples, n_features)
+#------------------------prediction------------------------------
+pred = gpc.predict(X_new) 
+print(pred) # 원래는 rock이 들어갔기 때문에 '1'을 예측해야 하지만 현재는 '0'으로 잘못 예측
 
-pred = gpc.predict(X_new) #(n_samples, n_features) #(1,118958 )
-print(pred)
-
-
-#
-##-------------------TEST--------------------------------------------
-#x_new = # 교수님의 손
-#pred = gpc.predict(x_new) #(n_samples, n_features) #(1,118958 )
-#print(pred)
-
-
-#-------------SVD
+#-------------------Future Work---------------------------
+# 1. interface를 이용하여 dataset 만들기(가능하면 sql로 database 구축까지)
+# 2. image processing하고 labeling 자동화 함수 만들기
+# 3. Gaussian Process이해해서 parameter 조정 or 다른 Classification 사용해보기
+# 4. SVD 이용해서 dataset 압축해보기
+# 5. Data Ploting
+# 6. Test(prediction) interface를 이용하여 실시간 예측값 보여주기
+# 7. 맞는 예측값 나올때까지 project developing 하
+#-----------------------SVD----------------------------------
 # import numpy as np
 ## 행렬 A는 이전 포스트에 있는 예제에서 사용된 것이다.
 # def SVDImage(input_image):
