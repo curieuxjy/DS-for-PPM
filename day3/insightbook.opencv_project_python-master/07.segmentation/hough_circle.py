@@ -1,7 +1,7 @@
 import cv2
 import numpy as np
 
-img = cv2.imread('../img/coins_spread1.jpg')
+img = cv2.imread('../img/coins_connected.jpg')
 # 그레이 스케일 변환 ---①
 gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 # 노이즈 제거를 위한 가우시안 블러 ---②

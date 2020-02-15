@@ -7,11 +7,8 @@ import cv2
 import numpy as np
 
 #------------------------edge-------------------
-
-
-
 names = ['bo.jpg','bo2.jpg','rock.jpg','rock2.jpg']
-path = "C:/Users/LG\Desktop/Intro for Data Science/data/" 
+path = "../data/" 
 list_num = []
 for name in names:
     file_path = path + name
@@ -19,16 +16,6 @@ for name in names:
     list_num.append(img)
     
 edge_list = [cv2.Laplacian(list_num[i],-1) for i in range(len(list_num))]
-
-
-  #-----------------------------
-#  for i in range():
-#    Bo = np.hstack((list_num[0],edge_list[0]))
-##    cv2.imshow('B',Bo)
-#    Bo_data = np.ravel(edge_list[0],order = 'C')
-#    #print(Bo_data.shape)
-#    Bo_label = '0'
-    #----------------------------------------------------
 
 Bo = np.hstack((list_num[0],edge_list[0]))
 cv2.imshow('B',Bo)

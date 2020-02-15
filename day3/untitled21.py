@@ -1,18 +1,15 @@
 # -*- coding: utf-8 -*-
-"""
-Created on Fri Feb 14 13:36:06 2020
 
-@author: LG
-"""
 import cv2
 import numpy as np
 
-img = cv2.imread('insightbook.opencv_project_python-master/img/coins_spread1.jpg')
-# 그레이 스케일 변환 ---①
+img = cv2.imread('insightbook.opencv_project_python-master/img/coins_connected.jpg')
+# 그레이 스케일 변환 
 gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
-# 노이즈 제거를 위한 가우시안 블러 ---②
+
+# 노이즈 제거를 위한 가우시안 블러
 blur = cv2.GaussianBlur(gray, (3,3), 0)
-# 허프 원 변환 적용( dp=1.5, minDist=30, cany_max=200 ) ---③
+# 허프 원 변환 적용( dp=1.5, minDist=30, cany_max=200 ) 
 circles = cv2.HoughCircles(blur, cv2.HOUGH_GRADIENT, 1.5, 30, None, 200)
 if circles is not None:
     circles = np.uint16(np.around(circles))

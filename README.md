@@ -108,17 +108,20 @@ Basic Education of Data Science for Production Process Monitoring
 |Image Comparison|[Code](./day3/untitled12.py)|
 |Image Subtraction|[Code](./day3/untitled13.py)|
 |Motion Difference Video|[Code](./day3/untitled14.py)|
-||[Code](./day3/untitled15.py)|
-||[Code](./day3/untitled16.py)|
-||[Code](./day3/untitled17.py)|
-||[Code](./day3/untitled18.py)|
-||[Code](./day3/untitled19.py)|
-||[Code](./day3/untitled20.py)|
-||[Code](./day3/untitled21.py)|
-||[Code](./day3/untitled22.py)|
-||[Code](./day3/untitled23.py)|
-||[Code](./day3/untitled24.py)|
-||[Code](./day3/project.py)|
+|Image Threshold 1|[Code](./day3/untitled15.py)|
+|Image Threshold 2|[Code](./day3/untitled16.py)|
+|Otsu Algorithm|[Code](./day3/untitled17.py)|
+|Adaptive Threshold|[Code](./day3/untitled18.py)|
+|Perspective Transform|[Code](./day3/untitled19.py)|
+|Matching|[Code](./day3/untitled20.py)|
+|Hough Cricle|[Code](./day3/untitled21.py)|
+|Perceptron|[Code](./day3/untitled22.py)|
+|Logistic Regression|[Code](./day3/untitled23.py)|
+|Support Vector Machine|[Code](./day3/untitled24.py)|
+|KNN 1|[Code](./day3/untitled25.py)|
+|KNN 2|[Code](./day3/untitled26.py)|
+|SVD|[Code](./day3/untitled27.py)|
+|Final Team Project|[Code](./day3/project.py)|
 
 ### Reference Link
 - [OpenCV Codes(파이썬으로 만드는 OpenCV 프로젝트)](./day2/insightbook.opencv_project_python-master)
@@ -126,4 +129,7 @@ Basic Education of Data Science for Production Process Monitoring
 - [opencv documentation](https://opencv-python.readthedocs.io/en/latest/#)
 - [ipdb 사용](http://pythonstudy.xyz/python/article/505-Python-%EB%94%94%EB%B2%84%EA%B9%85-PDB)
 - [Python Convex Optimization](https://cvxopt.org/)
+- [Scikit-learn Classification](https://scikit-learn.org/stable/auto_examples/classification/plot_classifier_comparison.html?highlight=random%20forest)
+- [Gaussian Process](https://www.slideshare.net/JungkyuLee1/gaussian-processes)
+- [SVD](https://www.fun-coding.org/recommend_basic6.html)
 

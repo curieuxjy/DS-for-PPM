@@ -1,47 +1,74 @@
 # -*- coding: utf-8 -*-
-"""
-Created on Fri Feb 14 13:36:38 2020
 
-@author: LG
-"""
+import numpy as np
+import matplotlib.pyplot as plt
+from sklearn import linear_model
 
-import cv2, numpy as np
+nData = 50
+x1 = 8*np.random.rand(nData, 1)
+x2 = 7*np.random.rand(nData, 1) - 3
 
-img1 = cv2.imread('insightbook.opencv_project_python-master/img/taekwonv1.jpg')
-img2 = cv2.imread('insightbook.opencv_project_python-master/img/figures.jpg')
-gray1 = cv2.cvtColor(img1, cv2.COLOR_BGR2GRAY)
-gray2 = cv2.cvtColor(img2, cv2.COLOR_BGR2GRAY)
+g = 1.5 * x1 + x2 - 2
 
-# ORB, BF-Hamming 로 knnMatch  ---①
-detector = cv2.ORB_create()
-kp1, desc1 = detector.detectAndCompute(gray1, None)
-kp2, desc2 = detector.detectAndCompute(gray2, None)
-matcher = cv2.BFMatcher(cv2.NORM_HAMMING2)
-matches = matcher.knnMatch(desc1, desc2, 2)
+C1 = np.where(g >= 1)
+C0 = np.where(g < -1)
+print(C1)
 
-# 이웃 거리의 75%로 좋은 매칭점 추출---②
-ratio = 0.75
-good_matches = [first for first,second in matches \
-                    if first.distance < second.distance * ratio]
-print('good matches:%d/%d' %(len(good_matches),len(matches)))
+C1 = np.where(g >= 1)[0]
+C0 = np.where(g < -1)[0]
+print(C1.shape)
+print(C0.shape)
 
-# 좋은 매칭점의 queryIdx로 원본 영상의 좌표 구하기 ---③
-src_pts = np.float32([ kp1[m.queryIdx].pt for m in good_matches ])
-# 좋은 매칭점의 trainIdx로 대상 영상의 좌표 구하기 ---④
-dst_pts = np.float32([ kp2[m.trainIdx].pt for m in good_matches ])
-# 원근 변환 행렬 구하기 ---⑤
-mtrx, mask = cv2.findHomography(src_pts, dst_pts)
-# 원본 영상 크기로 변환 영역 좌표 생성 ---⑥
-h,w, = img1.shape[:2]
-pts = np.float32([ [[0,0]],[[0,h-1]],[[w-1,h-1]],[[w-1,0]] ])
-# 원본 영상 좌표를 원근 변환  ---⑦
-dst = cv2.perspectiveTransform(pts,mtrx)
-# 변환 좌표 영역을 대상 영상에 그리기 ---⑧
-img2 = cv2.polylines(img2,[np.int32(dst)],True,255,3, cv2.LINE_AA)
+plt.figure(1, figsize=(10, 8))
+plt.plot(x1[C1], x2[C1], 'ro', alpha = 0.4, label = 'C1')
+plt.plot(x1[C0], x2[C0], 'bo', alpha = 0.4, label = 'C0')
+plt.title('Perceptron Algorithm', fontsize = 15)
+plt.legend(loc = 1, fontsize = 15)
+plt.xlabel(r'$x_1$', fontsize = 15)
+plt.ylabel(r'$x_2$', fontsize = 15)
+plt.show()
 
-# 좋은 매칭 그려서 출력 ---⑨
-res = cv2.drawMatches(img1, kp1, img2, kp2, good_matches, None, \
-                    flags=cv2.DRAW_MATCHES_FLAGS_NOT_DRAW_SINGLE_POINTS)
-cv2.imshow('Matching Homography', res)
-cv2.waitKey()
-cv2.destroyAllWindows()
+
+X1 = np.hstack([x1[C1], x2[C1]])
+X0 = np.hstack([x1[C0], x2[C0]])
+X = np.vstack([X1, X0])
+
+y = np.vstack([np.ones([C1.shape[0],1]), -np.ones([C0.shape[0],1])])
+
+clf = linear_model.Perceptron(tol=1e-3)
+clf.fit(X, np.ravel(y))
+
+testPoint = [4, 0]
+isOne = clf.predict([[4,0]])[0]
+
+print(isOne)
+#
+#if isOne > 0:
+#    plt.figure(1, figsize=(10, 8))
+#    plt.plot(testPoint[0], testPoint[1], 'ro', markersize=10)
+#else:
+#    plt.figure(1, figsize=(10, 8))
+#    plt.plot(testPoint[0], testPoint[1], 'bo', markersize=10)
+    
+    
+    
+w0 = clf.intercept_[0]
+w1 = clf.coef_[0,0]
+w2 = clf.coef_[0,1]
+
+x1p = np.linspace(0,8,100).reshape(-1,1)
+x2p = - w1/w2*x1p - w0/w2
+
+plt.figure(1, figsize=(10, 8))
+plt.plot(x1[C1], x2[C1], 'ro', alpha = 0.4, label = 'C1')
+plt.plot(x1[C0], x2[C0], 'bo', alpha = 0.4, label = 'C0')
+plt.plot(x1p, x2p, c = 'k', linewidth = 4, label = 'perceptron')
+plt.xlim([0, 8])
+plt.ylim([-7, 5])
+plt.xlabel('$x_1$', fontsize = 15)
+plt.ylabel('$x_2$', fontsize = 15)
+plt.legend(loc = 1, fontsize = 15)
+plt.show()
+
+
+    
